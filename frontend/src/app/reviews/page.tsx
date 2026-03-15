@@ -236,7 +236,7 @@ export default function ReviewsPage() {
                   </div>
 
                   <p className="text-white/60 text-lg font-light leading-relaxed uppercase tracking-tight italic mb-8">
-                    "{review.comment}"
+                    &quot;{review.comment}&quot;
                   </p>
 
                   {isAdmin && (

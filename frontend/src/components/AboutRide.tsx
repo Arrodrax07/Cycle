@@ -32,7 +32,7 @@ export default function AboutRide() {
             </div>
             
             <p className="text-white/60 text-lg md:text-xl font-light leading-relaxed max-w-lg uppercase tracking-tight">
-               Crafted for the elite. A cinematic 17–18 km journey through Mumbai's iconic shadows. 
+               Crafted for the elite. A cinematic 17–18 km journey through Mumbai&apos;s iconic shadows. 
                Experience the city when it truly belongs to you.
             </p>
 

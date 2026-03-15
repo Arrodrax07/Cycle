@@ -74,7 +74,7 @@ export default function Dashboard() {
           <div className="text-center py-20 glass rounded-3xl">
             <Ticket className="w-16 h-16 text-gray-600 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-white mb-2">No Bookings Found</h2>
-            <p className="text-gray-400 mb-8">You haven't booked any rides yet.</p>
+            <p className="text-gray-400 mb-8">You haven&apos;t booked any rides yet.</p>
             <Link href="/#booking" className="px-8 py-4 bg-neon-green text-black font-bold rounded-full hover:bg-white transition-colors">
               Book a Ride
             </Link>

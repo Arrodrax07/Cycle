@@ -1,0 +1,26 @@
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: frontend@0.1.0
+npm ERR! Found: next@16.1.6
+npm ERR! node_modules/next
+npm ERR!   next@"14.2.5" from the root project
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! next@"14.2.5" from the root project
+npm ERR! 
+npm ERR! Conflicting peer dependency: react@18.3.1
+npm ERR! node_modules/react
+npm ERR!   peer react@"^18.2.0" from next@14.2.5
+npm ERR!   node_modules/next
+npm ERR!     next@"14.2.5" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! 
+npm ERR! For a full report see:
+npm ERR! C:\Users\Paresh\AppData\Local\npm-cache\_logs\2026-03-15T21_27_23_866Z-eresolve-report.txt
+
+npm ERR! A complete log of this run can be found in: C:\Users\Paresh\AppData\Local\npm-cache\_logs\2026-03-15T21_27_23_866Z-debug-0.log
