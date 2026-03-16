@@ -67,8 +67,8 @@ export default function Navbar() {
              <span className="font-display text-2xl tracking-premium text-white">ELITE<span className="text-neon-cyan font-black">BMW</span></span>
           </Link>
           
-          {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-10 items-center">
+          {/* Desktop Menu - Visible only on LG and above to prevent tablet overflow */}
+          <div className="hidden lg:flex lg:space-x-6 xl:space-x-10 items-center">
             {links.map((link) => (
               link.href ? (
                 <Link
@@ -90,8 +90,11 @@ export default function Navbar() {
                 </button>
               )
             ))}
-            
-            <div className="flex items-center gap-6 border-l border-white/10 pl-10">
+          </div>
+
+          {/* Right Section: User/Login + Mobile Toggle */}
+          <div className="flex items-center gap-3 md:gap-6">
+            <div className="flex items-center lg:border-l lg:border-white/10 lg:pl-6 xl:pl-10">
                {user ? (
                  <div className="relative">
                    <button 
@@ -99,7 +102,7 @@ export default function Navbar() {
                       className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-white hover:text-neon-purple transition-all"
                    >
                      <User size={14} className="text-neon-purple" />
-                     {user.name.split(' ')[0]}
+                     <span className="hidden sm:inline">{user.name.split(' ')[0]}</span>
                    </button>
                    
                    <AnimatePresence>
@@ -129,17 +132,18 @@ export default function Navbar() {
                    </AnimatePresence>
                  </div>
                ) : (
-                 <Link href="/login" className="btn-premium btn-neon-cyan py-2 text-[8px]">
-                   Sign In
+                 <Link href="/login" className="btn-premium btn-neon-cyan py-2 px-3 md:px-5 lg:px-6 text-[8px] md:text-[9px] lg:text-[10px] flex items-center gap-2">
+                   <span className="hidden xs:inline">Sign In</span>
+                   <User size={12} className="xs:hidden" />
                  </Link>
                )}
             </div>
-          </div>
 
-          {/* Mobile Menu Toggle */}
-          <button className="md:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            {/* Mobile Menu Toggle - Visible on everything below LG */}
+            <button className="lg:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}>
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </nav>
 
@@ -151,7 +155,7 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[60] bg-black flex flex-col p-10 md:hidden"
+            className="fixed inset-0 z-[60] bg-black flex flex-col p-10 lg:hidden"
           >
             <div className="flex justify-between items-center mb-20">
                <span className="font-display text-2xl tracking-premium text-white">ELITE<span className="text-neon-cyan">BMW</span></span>
